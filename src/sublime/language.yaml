@@ -1,0 +1,49 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+
+name: Log file
+scopeName: text.log
+fileTypes: [log, log.dev]
+uuid: e0bea9c9-c772-4f31-b136-716e2b2fafcd
+
+patterns:
+  - name: meta.log.date
+    comment: Date
+    match: '\d{4}\-(\d{2}\-\d{2}) (\d{2}:\d{2}):\d{2}'
+    captures:
+      '1': {name: meta.log.date.day}
+      '2': {name: meta.log.date.time}
+  
+  - name: meta.log.error
+    comment: Error output
+    match: '^.+\n'
+  
+  - name: meta.log.status.error
+    comment: Error
+    match: '\bERROR \d{3}'
+  
+  - name: meta.log.status.success
+    comment: Success
+    match: '\bSUCCESS \d{3}'
+  
+  - name: meta.log.status.info
+    comment: Information
+    match: '\bINFO (\d{3}|STREAM)'
+  
+  - name: meta.log.resource
+    match: '(?!\[.+\])([^\s\/]+)?(\/\S*)'
+    captures:
+      '1': {name: meta.log.resource.host}
+      '2': {name: meta.log.resource.path}
+  
+  - name: meta.log.data
+    match: '\[(.*)\] \[(\d+\.\d+\.\d+\.\d+)\] \[(.*)\]$'
+    captures:
+      '1': {name: meta.log.data.message}
+      '2': {name: meta.log.data.ip}
+      '3': {name: meta.log.data.ua}
+  
+  - name: meta.log.pair
+    match: '(\S+)=(\S+)'
+    captures:
+      '1': {name: meta.log.pair.key}
+      '2': {name: meta.log.pair.value}

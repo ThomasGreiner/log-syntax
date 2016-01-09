@@ -1,0 +1,5 @@
+{
+  "color_scheme": "Packages/User/log.tmTheme",
+  "extensions": ["log", "log.dev"],
+  "word_wrap": false
+}

@@ -1,0 +1,64 @@
+# [PackageDev] target_format: plist, ext: tmTheme
+
+name: Log file
+uuid: e0bea9c9-c772-4f31-b136-716e2b2fafcd
+
+settings:
+  - settings:
+      lineHighlight: '#000A'
+  
+  - scope: meta.log.date
+    settings:
+      foreground: '#333'
+  
+  - scope: meta.log.date.day
+    settings:
+      foreground: '#555'
+  
+  - scope: meta.log.date.time
+    settings:
+      foreground: '#888'
+  
+  - scope: meta.log.error
+    settings:
+      background: '#800'
+  
+  - scope: meta.log.status.error
+    settings:
+      background: '#800'
+  
+  - scope: meta.log.status.success
+    settings:
+      foreground: '#3A3'
+  
+  - scope: meta.log.status.info
+    settings:
+      foreground: '#33A'
+  
+  - scope: meta.log.resource.host
+    settings:
+      foreground: '#555'
+  
+  - scope: meta.log.data
+    settings:
+      foreground: '#333'
+  
+  - scope: meta.log.data.message
+    settings:
+      foreground: '#883'
+  
+  - scope: meta.log.data.ua
+    settings:
+      foreground: '#338'
+  
+  - scope: meta.log.pair
+    settings:
+      foreground: '#555'
+  
+  - scope: meta.log.pair.key
+    settings:
+      foreground: '#33A'
+  
+  - scope: meta.log.pair.value
+    settings:
+      foreground: '#AAA'
