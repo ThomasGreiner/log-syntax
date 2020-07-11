@@ -8,6 +8,7 @@
 
 - Sublime Text
     - Copy all files in `sublime` directory into Sublime Text's `Packages/User` directory.
+    - Apply the syntax for specific files via Sublime's menu. Note that it will be applied automatically to any files with the `.log` or `.log.dev` file extension.
 
 ### Build it yourself
 
